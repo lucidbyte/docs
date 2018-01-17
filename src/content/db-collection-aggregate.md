@@ -23,6 +23,7 @@ $skip
 $sort
 $sortByCount
 $indexStats
+$collStats
 $sample
 $redact
 $replaceRoot
@@ -35,3 +36,10 @@ $replaceRoot
 {{arg forEach function}}
 
 {{arg onComplete function}}
+
+<div class="message is-warning">
+  <div class="message-header">Differences with Mongodb</div>
+  <div class="message-body">
+    <code>$collStats</code> returns only `localTime` and `storageStats` fields.
+  </div>
+</div>

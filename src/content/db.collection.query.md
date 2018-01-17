@@ -74,7 +74,7 @@ Zero-based index of pages to skip multiplied by `options.hitsPerPage`
 
 {{arg options.projection object}}
 
-An object of `key:value` pairs to include / exclude fields, where a value of `1` includes the field and `0` excludes the field. Supports all [mongodb projection operators](https://docs.mongodb.com/manual/reference/operator/query/index.html#projection-operators).
+An object of `key:value` pairs to include / exclude fields, where a value of `1` includes the field and `0` excludes the field. Supports all [mongodb projection operators](https://docs.mongodb.com/manual/reference/operator/query/index.html#query-and-projection-operators).
 
 #### Example - return only the `done` and `timestamp` fields
 

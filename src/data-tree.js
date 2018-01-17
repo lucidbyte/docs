@@ -1,3 +1,5 @@
+// TODO: add anchors to each header tag based on the document scope
+
 const fs = require('fs');
 const path = require('path');
 const { promisify } = require('util');
@@ -87,10 +89,11 @@ module.exports.data = async () => {
           insert: Child(await getDoc('db.collection.insert.md')),
           delete: Child(await getDoc('db.collection.delete.md')),
           aggregate: Child(
-            await getDoc('db.collection.aggregate.md', {
+            await getDoc('db-collection-aggregate.md', {
               pipelineStagesWhitelist: (...stages) => {
                 return stages.map((o) => {
-                  const href = `https://docs.mongodb.com/manual/reference/operator/aggregation/${o}/`;
+                  const operatorWithoutSpecialChar = o.slice(1);
+                  const href = `https://docs.mongodb.com/manual/reference/operator/aggregation/${operatorWithoutSpecialChar}/`;
                   return `- [${o}](${href})\n`;
                 }).join('');
               }
