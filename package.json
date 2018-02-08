@@ -2,6 +2,10 @@
   "name": "@lucidbyte/docs",
   "version": "1.0.0",
   "description": "lucidbyte documentation",
+  "repository": {
+    "type" : "git",
+    "url" : "git@github.com:lucidbyte/docs.git"
+  },
   "main": "dist/docs.js",
   "scripts": {
     "build": "node src/build.js",
