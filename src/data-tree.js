@@ -99,7 +99,6 @@ module.exports.data = async () => {
               }
             }),
           ),
-          has: Child(await getDoc('has.md')),
           createIndex: Child(await getDoc('db.collection.createIndex.md')),
           getIndexes: Child(await getDoc('db.collection.getIndexes.md')),
         }),

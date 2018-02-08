@@ -6,7 +6,7 @@ client.collection.set(
 )
 ```
 
-Modifies an existing document in a {{collection}}.
+Replaces an existing document in a {{collection}} or creates the document if it doesn't exist.
 
 ### Arguments
 
